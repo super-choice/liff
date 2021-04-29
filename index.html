@@ -75,6 +75,14 @@
 //       const result = await liff.scanCode()
 //       document.getElementById("scanCode").append(result.value)
 //     }
+
+    const queryString = decodeURIComponent(window.location.search);
+    const params = new URLSearchParams(queryString);
+    if (params.get("param") !== null {
+//    document.getElementById("param").append(params.get("param"));
+    document.getElementById("param").append(params.get("param"));        
+    }
+
     
     function openWindow() {
       liff.openWindow({
