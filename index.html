@@ -81,6 +81,17 @@
     if (params.get("param") !== null {
 //    document.getElementById("param").append(params.get("param"));
     document.getElementById("param").append(params.get("param"));        
+      if (liff.getContext().type !== "none") {
+    async function sendText() {
+        await liff.sendMessages([
+          {
+            "type": "message",
+            "text": params.get("param"),
+          }
+        ])
+        alert("Message sent")
+      }
+    }
     }
 
     
