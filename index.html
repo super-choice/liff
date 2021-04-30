@@ -79,19 +79,19 @@
     const queryString = decodeURIComponent(window.location.search);
     const params = new URLSearchParams(queryString);
     if (params.get("param") !== null {
-//    document.getElementById("param").append(params.get("param"));
-    document.getElementById("param").append(params.get("param"));        
-      if (liff.getContext().type !== "none") {
+    document.getElementById("param").append(params.get("param"));   
+    sendText;
+
     async function sendText() {
+      if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
-            "type": "message",
-            "text": params.get("param"),
+            "type": "text",
+            "text": params.get("param")
           }
         ])
         alert("Message sent")
       }
-    }
     }
 
     
