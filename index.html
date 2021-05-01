@@ -173,7 +173,20 @@
           document.getElementById("scanCode").append(params.get("param"));   
           }
           document.getElementByTagName("h1").innerHTML = params.get("param")
-          sendText()
+//          sendText()
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": params.get("param")
+          }
+        ])
+        .then(() => {
+          console.log('message sent');
+        })
+        .catch((err) => {
+          console.log('error', err);
+        });        
+        alert("Message sent")
         } else {
           liff.login()
         }
