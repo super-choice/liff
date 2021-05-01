@@ -28,7 +28,7 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="https://super-choice.github.io/liff/path/index.html?param=9">Link to Path</a></p>
 
-  <button id="btnMsg" onclick="sendText()">Send Message</button>
+  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
 <!--   <button id="btnScanCode" onclick="scanCode()">Scan Code</button> -->
@@ -105,19 +105,6 @@
         alert("Message sent")
       }
     }
-
-    async function sendText() {
-      const sms = params.get("param")
-      if (liff.getContext().type !== "none") {
-        await liff.sendMessages([
-          {
-            "type": "text",
-            "text": `${sms} ทดสอบ`
-          }
-        ])
-        alert("Message sent")
-      }
-    }
     
     function getContext() {
       if (liff.getContext() != null) {
@@ -165,7 +152,13 @@
           const params = new URLSearchParams(queryString);
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
-          sendText()
+          await liff.sendMessages([
+            {
+              "type": "text",
+              "text": `${params} ทดสอบ`
+            }
+        ])
+        alert("Message sent")
           }
         } else {
           liff.login()
