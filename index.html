@@ -154,7 +154,7 @@
           const params = new URLSearchParams(queryString);
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
-//          document.getElementByTagName("h1")[0].innerHTML = params.get("param")
+          document.getElementByTagName("h1")[0].innerHTML = params.get("param")
           }
         } else {
           liff.login()
