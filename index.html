@@ -115,6 +115,12 @@
             "text": params.get("param")
           }
         ])
+        .then(() => {
+          console.log('message sent');
+        })
+        .catch((err) => {
+          console.log('error', err);
+        });        
         alert("Message sent")
       }
     }
