@@ -23,7 +23,6 @@
   <p id="groupId"><b>groupId:</b> </p>
   <p id="friendship"><b>isFriendship:</b> </p>
   <p id="scanCode"><b>Code:</b> </p>
-  <h1>Scan Code</h1>
   <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
   <p id="universalLink1"><b>Universal Link:</b> </p>
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
@@ -171,9 +170,8 @@
           createUniversalLink()
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
-          }
-          document.getElementById("h1").innerHTML = params.get("param")
           sendText()
+          }
         } else {
           liff.login()
         }
