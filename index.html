@@ -108,7 +108,7 @@
     }
 
     async function sendText() {
-      if (liff.getContext().type !== "none") {
+//      if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
             "type": "text",
@@ -122,7 +122,7 @@
           console.log('error', err);
         });        
         alert("Message sent")
-      }
+//      }
     }
     
     function getContext() {
