@@ -84,17 +84,17 @@
     document.getElementByTagName("h1")[0].innerHTML = params.get("param")
     }
     
-    async function sendText() {
-      if (liff.getContext().type !== "none") {
-        await liff.sendMessages([
-          {
-            "type": "text",
-            "text": params.get("param")
-          }
-        ])
-        alert("Message sent")
-      }
-    }
+//     async function sendText() {
+//       if (liff.getContext().type !== "none") {
+//         await liff.sendMessages([
+//           {
+//             "type": "text",
+//             "text": params.get("param")
+//           }
+//         ])
+//         alert("Message sent")
+//       }
+//     }
 
     
     function openWindow() {
