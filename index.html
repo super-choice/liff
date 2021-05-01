@@ -148,7 +148,6 @@
         document.getElementById("btnLogOut").style.display = "none"
       } else {
         document.getElementById("btnMsg").style.display = "none"
-//        document.getElementById("btnScanCode").style.display = "none"
         document.getElementById("btnClose").style.display = "none"
       }
     }
@@ -167,7 +166,7 @@
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
           document.getElementByTagName("h1")[0].innerHTML = params.get("param")
-          sendText(params.get("param"))
+          sendText()
           }
         } else {
           liff.login()
