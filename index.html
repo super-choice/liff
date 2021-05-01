@@ -107,6 +107,18 @@
       }
     }
 
+    async function sendText() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": 1
+          }
+        ])
+        alert("Message sent")
+      }
+    }
+    
     function getContext() {
       if (liff.getContext() != null) {
         document.getElementById("type").append(liff.getContext().type)
@@ -155,6 +167,7 @@
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
           document.getElementByTagName("h1")[0].innerHTML = params.get("param")
+          sendText()
           }
         } else {
           liff.login()
