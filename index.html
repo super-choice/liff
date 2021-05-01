@@ -159,16 +159,16 @@
         if (liff.isLoggedIn()) {
           const queryString = decodeURIComponent(window.location.search);
           const params = new URLSearchParams(queryString);
-          if (params.get("param") !== null) {
-          document.getElementById("scanCode").append(params.get("param"));   
-          document.getElementByTagName("h1")[0].innerHTML = params.get("param")
-          sendText()
-          }
           getEnvironment()
           getUserProfile()
           getContext()
           getFriendship()
           createUniversalLink()
+          if (params.get("param") !== null) {
+          document.getElementById("scanCode").append(params.get("param"));   
+          document.getElementByTagName("h1")[0].innerHTML = params.get("param")
+          sendText()
+          }
         } else {
           liff.login()
         }
