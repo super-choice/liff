@@ -111,7 +111,7 @@
         await liff.sendMessages([
           {
             "type": "text",
-            "text": params.value
+            "text": + document.getElementById("scanCode").value
           }
         ])
         .then(() => {
