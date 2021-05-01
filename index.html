@@ -29,7 +29,7 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="https://super-choice.github.io/liff/path/index.html?param=9">Link to Path</a></p>
 
-  <button id="btnMsg" onclick="sendText()">Send Message</button>
+  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
 <!--   <button id="btnScanCode" onclick="scanCode()">Scan Code</button> -->
@@ -167,7 +167,7 @@
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
           document.getElementByTagName("h1")[0].innerHTML = params.get("param")
-          sendText()
+          sendText(params.get("param"))
           }
         } else {
           liff.login()
