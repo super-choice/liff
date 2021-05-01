@@ -23,6 +23,7 @@
   <p id="groupId"><b>groupId:</b> </p>
   <p id="friendship"><b>isFriendship:</b> </p>
   <p id="scanCode"><b>Code:</b> </p>
+  <h1>Scan Code</h1>
   <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
   <p id="universalLink1"><b>Universal Link:</b> </p>
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
@@ -36,11 +37,11 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script>
+  <script src="js/vconsole.min.js"></script>
   <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
-  </script> -->
+  </script> 
 
   <script src="https://static.line-scdn.net/liff/edge/versions/2.8.1/sdk.js"></script>
   <script>
@@ -79,9 +80,9 @@
     const queryString = decodeURIComponent(window.location.search);
     const params = new URLSearchParams(queryString);
     if (params.get("param") !== null {
-    document.getElementById("param").append(params.get("param"));   
-    sendText;
-
+//    document.getElementById("param").append(params.get("param"));   
+    document.getElementByTagName("h1")[0].innerHTML = params.get("param")
+    
     async function sendText() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
