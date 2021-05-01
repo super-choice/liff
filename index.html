@@ -112,7 +112,7 @@
         await liff.sendMessages([
           {
             "type": "text",
-            "text": params.get("param")
+            "text": ${params}
           }
         ])
         .then(() => {
@@ -172,21 +172,8 @@
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
           }
-          document.getElementByTagName("h1").innerHTML = params.get("param")
-//          sendText()
-        liff.sendMessages([
-          {
-            "type": "text",
-            "text": params.get("param")
-          }
-        ])
-        .then(() => {
-          console.log('message sent');
-        })
-        .catch((err) => {
-          console.log('error', err);
-        });        
-        alert("Message sent")
+          document.getElementById("h1").innerHTML = params.get("param")
+          sendText()
         } else {
           liff.login()
         }
