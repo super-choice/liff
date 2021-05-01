@@ -112,7 +112,7 @@
         await liff.sendMessages([
           {
             "type": "text",
-            "text": 1
+            "text": "1"
           }
         ])
         alert("Message sent")
@@ -157,16 +157,16 @@
       liff.ready.then(() => {
         document.getElementById("isLoggedIn").append(liff.isLoggedIn())
         if (liff.isLoggedIn()) {
-          getEnvironment()
-          getUserProfile()
-          getContext()
-          getFriendship()
-          createUniversalLink()
           const queryString = decodeURIComponent(window.location.search);
           const params = new URLSearchParams(queryString);
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
           document.getElementByTagName("h1")[0].innerHTML = params.get("param")
+          getEnvironment()
+          getUserProfile()
+          getContext()
+          getFriendship()
+          createUniversalLink()
           sendText()
           }
         } else {
