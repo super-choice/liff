@@ -152,7 +152,7 @@
           const params = new URLSearchParams(queryString);
           if (params.get("param") !== null) {
           document.getElementById("scanCode").append(params.get("param"));   
-          await liff.sendMessages([
+          liff.sendMessages([
             {
               "type": "text",
               "text": `${params} ทดสอบ`
