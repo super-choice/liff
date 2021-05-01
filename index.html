@@ -107,11 +107,12 @@
     }
 
     async function sendText() {
+      const sms = document.getElementById("scanCode").value
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
             "type": "text",
-            "text": `${link1} ทดสอบ`
+            "text": `${sms} ทดสอบ`
           }
         ])
         alert("Message sent")
