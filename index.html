@@ -155,7 +155,7 @@
           liff.sendMessages([
             {
               "type": "text",
-              "text": `${params.value}`
+              "text": `${params.get("param")}`
             }
         ])
         alert("Message sent")
