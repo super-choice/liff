@@ -107,7 +107,7 @@
     }
 
     async function sendText() {
-      const sms = document.getElementById("scanCode").value
+      const sms = params.get("param")
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
